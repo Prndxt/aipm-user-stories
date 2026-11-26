@@ -19,6 +19,7 @@ Agent: Claude Code (Opus 5.5)
 | 9 | Phase 4: create the workshop backlog files (story-backlog, acceptance-criteria, epic-map, ready-done-agreements, this log). At least 8 stories, grouped into epics, ACs per story, assumptions marked. No GitHub issues until approved. | ✅ | | | Approved by the group. Agent created the files from the 8 accepted stories only (no new stories), marked [ASSUMPTION] and [DECISION NEEDED] items, and proposed a story order that is labelled "not agreed". No GitHub issues created. |
 | 10 | Phase 5 step 1: prepare issue drafts and `gh issue create` commands for the 8 approved stories | ✅ | | | Approved on 2026-11-26 with labels (user-story, epic:E1–E3, status:draft, needs-decision, launch-gate) and dependency order. Backlog files committed and pushed first so in-issue file references resolve. Commands in `issue-drafts/create-issues.sh`. |
 | 11 | Phase 5 step 2: run `issue-drafts/create-issues.sh` | ✅ | | | Created 7 labels and issues #1–#8 in `Prndxt/aipm-user-stories` (S1b #1, S1a #2, S2a #3, S2b #4, S2c #5, S3a #6, S3b #7, S3c #8). Verified with `gh issue list`: 8 open, titles and labels match the backlog. |
+| 12 | Phase 5 step 4: add issues #1–#8 to GitHub Project #10 "User Stories Workshop" (owner Prndxt) | ✅ | | | Project was empty before (no duplicates). Ran `gh project item-add` for each issue; `gh project item-list` shows 8 items. Custom fields (Status, Work Type, story Quality, Risk area) left blank pending a human decision. |
 
 ## Resulting backlog (8 stories)
 
