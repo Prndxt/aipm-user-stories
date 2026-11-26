@@ -68,6 +68,55 @@ For each story, add:
 Do this before using the agent so you can judge whether the agent improves the
 work.
 
+---------
+
+As a support agent,
+I want every suggested answer to show the exact policy document, version, and passage it came from,
+so that I can verify the answer before sending it to a customer and don't pass on an unsupported claim.
+
+Acceptance criteria
+
+-Every answer shows at least one citation (document title, version or effective date, section) that links to the passage, and an answer with no supporting passage is not shown as an answer.
+- The assistant retrieves only from the approved policy document set. In a test of 20 questions whose answers exist only in non-approved material, it answers none of them from that material and tells the agent no approved source was found.
+
+Open question: 
+What counts as "approved," and who owns the list? We need a named owner and a rule for how retired or superseded policy versions are removed.
+
+Risk/assumption: We assume the approved documents can be ingested and split into citable sections within the first one to two weeks. If the documents are scanned PDFs, inconsistently structured, or contradict each other, citations will be vague and the four-week timeline is at risk.
+
+-------
+
+Story 2: Legal-approved disclaimers and human review of flagged answers
+
+As a legal reviewer and support team lead,
+I want disclaimer wording to come only from legal-approved text, and answers on sensitive or low-confidence topics to be routed to a human reviewer before they reach a customer,
+so that the pilot doesn't create legal exposure or send risky answers unchecked.
+
+Acceptance criteria
+
+Disclaimers appear only as verbatim text from a legal-approved library, and the assistant cannot generate or alter disclaimer wording. Legal signs off on the library before any agent uses the pilot with live customers.
+Answers are flagged and held for human review when they touch a defined sensitive-topic list (for example refunds above a threshold, legal claims, or account closure) or when the retrieval is weak. Held answers cannot be copied or sent until a reviewer approves or rejects them, and every decision is logged.
+
+Open question: Who defines the sensitive-topic list and the review thresholds, and is there reviewer capacity to handle the flagged volume without erasing the time savings?
+
+Risk/assumption: We assume legal can turn around disclaimer wording within the first two weeks. If legal review slips, the pilot either launches without approved disclaimers (not acceptable) or loses its useful window. Over-flagging is a related risk: if too many answers are held, agents will stop using the tool.
+---
+Story 3: Evidence of time savings without added risk
+
+As a pilot sponsor,
+I want a baseline and pilot comparison of handling time and answer quality,
+so that I can decide with evidence whether to expand the pilot, change it, or stop it.
+
+Acceptance criteria
+
+Before launch, we record a baseline for a defined set of ticket types (average handling time and a quality score from a sampled audit). During the pilot, the same measures are tracked for assisted tickets and compared with that baseline or a control group.
+Weekly, a reviewer audits a random sample of assisted answers, plus all flagged ones, for factual accuracy against the cited source and policy compliance. Pre-agreed stop conditions (for example any answer that gives a customer materially wrong policy information) pause the pilot for review.
+
+Open question: What counts as a meaningful time saving, and what error rate is acceptable? Both thresholds must be agreed before launch, not after seeing the results.
+
+Risk/assumption: We assume four weeks and the available ticket volume are enough to give statistically meaningful results. If volume is low or ticket types vary a lot, we may only get directional evidence, and we should say so up front. Agents may also change their behavior because they know they are being measured.
+
+
 ## Phase 2: Ask the Agent to Critique
 
 Open the project with Claude Code, Codex, or another coding agent using any
