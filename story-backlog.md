@@ -4,7 +4,7 @@ Source: the three draft stories in `05-session-handout.md`, split during the
 Phase 2 review. The group accepted all splits (see `ai-collaboration-log.md`).
 
 Status of every story: **Draft**. None is Ready until its open items are
-resolved (see `ready-done-agreements.md`). No GitHub issues have been created.
+resolved (see `ready-done-agreements.md`). GitHub issues #1–#8 created on 2026-11-26 (links under each story).
 
 Legend: **[ASSUMPTION]** = not validated, needs a named owner to confirm.
 **[DECISION NEEDED]** = a value or choice a human must set.
@@ -15,6 +15,7 @@ Legend: **[ASSUMPTION]** = not validated, needs a named owner to confirm.
 
 ### S1a: Cite the source of every answer
 **From:** Story 1
+**GitHub:** https://github.com/Prndxt/aipm-user-stories/issues/2
 
 As a support agent,
 I want each suggested answer to cite the policy document, version, and section it came from,
@@ -29,6 +30,7 @@ so that I can check it before replying to a customer.
 
 ### S1b: Answer only from approved sources
 **From:** Story 1
+**GitHub:** https://github.com/Prndxt/aipm-user-stories/issues/1
 
 As a support agent,
 I want the assistant to answer only from approved policy documents and to tell me when no approved source exists,
@@ -46,6 +48,7 @@ so that I don't pass on unapproved or made-up information.
 
 ### S2a: Legal-approved disclaimer library
 **From:** Story 2
+**GitHub:** https://github.com/Prndxt/aipm-user-stories/issues/3
 
 As a legal reviewer,
 I want the assistant to use only disclaimer text from a legal-approved library, word for word,
@@ -57,6 +60,7 @@ so that customers never receive wording legal hasn't approved.
 
 ### S2b: Hold risky answers for review
 **From:** Story 2
+**GitHub:** https://github.com/Prndxt/aipm-user-stories/issues/4
 
 As a support team lead,
 I want answers on defined sensitive topics or with weak source matches to be held for review,
@@ -70,6 +74,7 @@ so that risky answers don't reach customers unchecked.
 
 ### S2c: Review queue with decision log
 **From:** Story 2
+**GitHub:** https://github.com/Prndxt/aipm-user-stories/issues/5
 
 As a reviewer,
 I want to approve or reject held answers in one place, with every decision logged,
@@ -87,6 +92,7 @@ so that flagged answers are handled fast and decisions can be audited.
 
 ### S3a: Pre-launch baseline
 **From:** Story 3
+**GitHub:** https://github.com/Prndxt/aipm-user-stories/issues/6
 
 As a pilot sponsor,
 I want average handling time and audited answer accuracy for the agreed ticket types recorded before launch,
@@ -101,6 +107,7 @@ so that the pilot has a fair baseline to compare against.
 
 ### S3b: Weekly assisted vs. baseline report
 **From:** Story 3
+**GitHub:** https://github.com/Prndxt/aipm-user-stories/issues/7
 
 As a pilot sponsor,
 I want a weekly report comparing assisted tickets against the baseline on handling time and audited accuracy,
@@ -116,6 +123,7 @@ so that I can decide with evidence to expand, change, or stop the pilot.
 
 ### S3c: Stop conditions that pause the pilot
 **From:** Story 3
+**GitHub:** https://github.com/Prndxt/aipm-user-stories/issues/8
 
 As a support team lead *(or legal; to confirm)*,
 I want pre-agreed stop conditions that pause assisted answers when they are triggered,
